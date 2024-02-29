@@ -59,9 +59,8 @@ def generate_images(openai_api_key, output_file_path, prompt, n, resolution, mod
 with gr.Blocks() as app:
     gr.Markdown("## DALL-E Image Creation")
     with gr.Row():
-        if "OPENAI_API_KEY" in os.environ:
-            openai_api_key = gr.Textbox(label="OpenAI Key", type="password", value=os.environ["OPENAI_API_KEY"])
-        # openai_api_key = gr.Textbox(label="OpenAI Key", type="password")
+        key = os.environ.get("OPENAI_API_KEY","")
+        openai_api_key = gr.Textbox(label="OpenAI Key", type="password", value=key, placeholder="Enter your OpenAI API key...")
         output_file_path = gr.Textbox(label="Save Log File Path (optional)", placeholder="Enter the file path to save the log file...", type="text")
     with gr.Row():
         prompt = gr.Textbox(label="Prompt", placeholder="Enter your prompt here...")
