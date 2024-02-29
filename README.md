@@ -21,8 +21,8 @@ Ensure you have Python installed on your system (Python 3.6 or later is recommen
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository-url>
-   cd dall-e-image-generator-app
+   git clone https://github.com/meirm/dall-e-gradio.git
+   cd dall-e-gradio
    ```
 
 2. **Install Dependencies**
